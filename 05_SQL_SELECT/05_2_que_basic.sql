@@ -1,4 +1,4 @@
-/* QUERIES Basic */
+-- /* QUERIES Basic */
 
 /*
 Felder abfragen
@@ -7,7 +7,7 @@ Ausgabe beschränken
 */
 
 -- Abfrage aller Spalten der Tab
-#SELECT * FROM stocks.ccc;
+-- #SELECT * FROM stocks.ccc;
 
 -- Begrenzung: LIMIT
 -- Abfrage eines Feldes oder einer Feld-Kombi m. Umbenennung (Alias)
@@ -15,12 +15,12 @@ Ausgabe beschränken
 -- hier mit Verknüpfung CONCAT() // String-Fkt.
 SELECT
    ticker AS "SYM",
-   price AS "Kurs in $",
+   -- price AS "Kurs in $",
    c_name AS Unternehmen,
-   #industry Branche
+   -- industry Branche
    concat( sector, " | ", industry) AS "Operations"
 FROM stocks.ccc
-#LIMIT 200,10
-#LIMIT 1
+-- LIMIT 200,10
+-- LIMIT 1
 LIMIT 10 -- X Zeilen ab 0
 ;
